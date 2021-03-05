@@ -1,0 +1,4 @@
+baseURL = "https://raydwaipayan.github.io/blogs"
+languageCode = "en-us"
+title = "Dwai's blogs"
+theme = "papermod"
