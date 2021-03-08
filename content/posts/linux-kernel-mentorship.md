@@ -4,7 +4,7 @@ date: 2021-03-06T02:05:17+05:30
 draft: false
 ---
 
-### Checkpatch - What is it?
+## Checkpatch - What is it?
 [checkpatch.pl](https://github.com/torvalds/linux/blob/master/scripts/checkpatch.pl) is a trivial style checker for patches sent to the linux kernel.
 
 Why is it needed you say?</br>
@@ -35,7 +35,7 @@ stylistically coherent, we can:
 
 Both of these are where checkpatch comes handy.
 
-### Checkpatch in the patch submission process
+## Checkpatch in the patch submission process
 
 Before sending out the patches to the mailing list, it is recommended to
 run checkpatch over the patches.
@@ -51,7 +51,7 @@ In general, a Kernel developer would:
 The only catch here is that checkpatch is not always right. It is just a dumb
 perl script. If the code looks better with checkpatch errors, let it be.
 
-### Drawbacks of checkpatch
+## Drawbacks of checkpatch
 
 Checkpatch is only a static trivial style checker. It does not have the
 capabilities of a full c based parser like [clang-format](https://www.kernel.org/doc/html/latest/process/clang-format.html). In this sense it is limited in
@@ -59,9 +59,9 @@ what it can do. Still, it is highly valuable as a style checker tool and can
 ease the work of maintainers and increase the chances of the patch being accepted
 by the community.
 
-### What did we do to improve it?
+## What did we do to improve it?
 
-Over the first 3 months of my mentorship period, I primarily focussed on
+Over the first 3 months of my mentorship period, I primarily focused on
 eliminating false-positives from checkpatch as well as adding new rules.
 
 Consider the following patch commit log:
@@ -80,3 +80,64 @@ WARNING: Commit log lines starting with '#' are dropped by git as comments
 #82: 
 #include asm/bitsperlong.h avoid further potential userspace pollution
 ```
+
+During the last 3 months I worked on two major features:
+
+> - Addition of a verbose mode to checkpatch
+> - Addition of an external documentation to checkpatch
+
+For the documentation we decided to document all checkpatch message types,
+their meanings and how to resolve them. This is still a work in progress.
+Contributions are definitely welcome :-P.
+
+### Verbose Mode
+
+This was one of the new additions we did to checkpatch.
+
+One can run checkpatch like this:
+
+```/bin/bash
+./scripts/checkpatch.pl -v test.patch
+```
+
+All verbose descriptions can be seen by pairing the verbose option
+with --list-types:
+
+```/bin/bash
+./scripts/checkpatch.pl --list-types -v
+```
+
+### Checkpatch Documentation
+
+The checkpatch documentation can be viewed from the kernel root
+at `Documentation/dev-tools/checkpatch`.
+
+To build the documentation make sure you have configured sphynx
+either in the system or in a python virtualenv. Next the kernel
+doc can be built using:
+
+```/bin/bash
+make htmldocs
+```
+
+## How to contribute to the documentation?
+
+The documentation is still a work in progress. Feel free to send
+the patches to the kernel-doc mailing list, and add me (Dwaipayan
+Ray <dwaipayanray1@gmail.com>) and Lukas (Lukas Bulwahn <lukas.bulwahn@gmail.com>) for reviewing it.
+
+Before sending out the mail, please always:
+
+> - checkpatch.pl your changes
+> - build check your patch (in this case check the generated html docs)
+> - spell check your patch (this can be easily done through checkpatch
+>   using --codespell flag if you already have the codespell dictionary)
+
+## Acknowledgements
+
+During my mentorship period I learned a lot from my mentors. 
+I would like to thank Lukas for his constant support as my mentor,
+Joe for his guidance with checkpatch and everyone in the community for being such
+amazing people.
+
+The kernel contribution process may look old but it works. This is due to the dedication of everyone in the community, which I am glad to be a part of.
