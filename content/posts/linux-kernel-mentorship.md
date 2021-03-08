@@ -110,7 +110,7 @@ with --list-types:
 ### Checkpatch Documentation
 
 The checkpatch documentation can be viewed from the kernel root
-at `Documentation/dev-tools/checkpatch`.
+at `Documentation/dev-tools/checkpatch.rst`.
 
 To build the documentation make sure you have configured sphynx
 either in the system or in a python virtualenv. Next the kernel
@@ -125,6 +125,9 @@ make htmldocs
 The documentation is still a work in progress. Feel free to send
 the patches to the kernel-doc mailing list, and add me (Dwaipayan
 Ray <dwaipayanray1@gmail.com>) and Lukas (Lukas Bulwahn <lukas.bulwahn@gmail.com>) for reviewing it.
+
+The documentation is writted in rst syntax. Refer
+[here](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html) for a quick guide.
 
 Before sending out the mail, please always:
 
