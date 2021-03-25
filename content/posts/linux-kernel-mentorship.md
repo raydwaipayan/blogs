@@ -157,7 +157,7 @@ find the people associated with that particular code. After finding those
 people it's very easy to send the patches to the list and the associated
 people. This follows a period of extensive review which is very useful for
 having good code. I have got lots of reviews from people in the community
-and those patches are successfully merged into mainline.
+and those patches are successfully merged into the mainline.
 
 So I was really amazed by the process. What is even more amazing is that the
 newcomers won't get lost in this extensive process. There are always
