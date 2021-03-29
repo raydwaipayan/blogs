@@ -127,7 +127,7 @@ make htmldocs
 
 The documentation is still a work in progress. Feel free to send
 the patches to the kernel-doc mailing list, and add me
-(Dwaipayan Ray <dwaipayanray1@gmail.com>) and Lukas (Lukas Bulwahn <lukas/bulwahn@gmail.com>)
+(Dwaipayan Ray <dwaipayanray1@gmail.com>) and Lukas (Lukas Bulwahn <lukas.bulwahn@gmail.com>)
 for reviewing it.
 
 The documentation is written in rst syntax. Refer
