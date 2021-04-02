@@ -14,7 +14,7 @@ information and the resources used by the operating system to manage
 the execution of that process.
 
 In a UNIX-based system, each process is isolated from each other.
-From the viewpoint of the process, it appeats to have control over
+From the viewpoint of the process, it appears to have control over
 and access to all the system resources as they were all of their own.
 
 From the kernel’s point of view, a process consists of user-space memory
@@ -75,7 +75,7 @@ referred to as segments:
 * The **text** segment contains the machine language instructions of the
   process code. The text segment is made read only so that it cannot be
   accidentally modified by a bad pointer.
-  Since many processes run the same program, it is also made sharable so
+  Since many processes run the same program, it is also made shareble so
   that a single copy of the program code can be mapped into the virtual
   address space of the processes.
 
@@ -84,7 +84,7 @@ referred to as segments:
       that are explicitly initialized.
     
     * The **uninitialized data** segment contains global and static variables
-      that are not expicitly initialized. Before starting the program, the
+      that are not explicitly initialized. Before starting the program, the
       system initializes all memory in this segment to 0.
       For historical reasons, it is also called the **bss** segment, a name
       derived from an old assembler mnemonic for "block started by symbol".
