@@ -1,4 +1,5 @@
 baseURL = "https://raydwaipayan.github.io/blogs"
+canonifyURLs = true
 languageCode = "en-us"
 title = "Dwai's blogs"
 theme = "papermod"
