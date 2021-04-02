@@ -100,7 +100,7 @@ referred to as segments:
 * The **heap** is an area from which memory can be allocated dynamically during
   runtime.
 
-![virtual memory layout](/static/virtual_memory_layout.png)
+![virtual memory layout](/virtual_memory_layout.png)
 
 ### Virtual Memory
 
@@ -115,7 +115,7 @@ address space (the set of all virtual memory pages available to the process).
 Each entry in the page table either indicates the location of a virtual page in RAM
 or indicates that it currently resides on disk (swap).
 
-![page mapping](/static/page_mapping.png)
+![page mapping](/page_mapping.png)
 
 At any one time, only some of the pages of a program need
 to be resident in physical memory page frames; these pages form the so-called
