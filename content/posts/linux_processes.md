@@ -100,6 +100,10 @@ referred to as segments:
 * The **heap** is an area from which memory can be allocated dynamically during
   runtime.
 
+![virtual memory layout](/static/virtual_memory_layout.png)
+
+### Virtual Memory
+
 The memory layout we are talking about is the process's virtual memory.
 A virtual memory scheme splits the memory used by each process into small units
 called pages. Correspondingly RAM is divided into a series of page frames of the
@@ -111,11 +115,13 @@ address space (the set of all virtual memory pages available to the process).
 Each entry in the page table either indicates the location of a virtual page in RAM
 or indicates that it currently resides on disk (swap).
 
+![page mapping](/static/page_mapping.png)
+
 At any one time, only some of the pages of a program need
 to be resident in physical memory page frames; these pages form the so-called
 resident set. Copies of the unused pages of a program are maintained in the swap
 area—a reserved area of disk space used to supplement the computer’s RAM—and
-loaded into physical memory only as required
+loaded into physical memory only as required.
 
 If a process refer to a page that is not currently on physical memory, then a page
 fault occurs, at which stage kernel suspends execution of the process till the
