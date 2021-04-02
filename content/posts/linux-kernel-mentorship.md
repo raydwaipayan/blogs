@@ -10,7 +10,7 @@ is a trivial style checker for patches sent to the linux kernel.
 
 Why is it needed you say?</br>
 I did an analysis on checkpatch warnings on about 50k commits from v5.4.</br>
-(Find the full report {{% link checkpatch_out_50k.txt %}}here{{% /link %}})
+(Find the full report {{% link "checkpatch_out_50k.txt" %}}here{{% /link %}})
 
 The top errors were then generated via the following shell command:
 ```/bin/bash
