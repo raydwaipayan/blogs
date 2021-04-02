@@ -49,14 +49,14 @@ not necessary to be allocated to the program on disk. The executable only
 needs to store the location and size required for the uninitialized data
 segment and this space is allocated by the program loader at runtime.</p></li><li><p>The <strong>stack</strong> is a dynamically growing segment. A function stores the function&rsquo;s
 local variables, arguments and return addresses on the stack.</p></li><li><p>The <strong>heap</strong> is an area from which memory can be allocated dynamically during
-runtime.</p></li></ul><p><img src=/static/virtual_memory_layout.png alt="virtual memory layout"></p><h3 id=virtual-memory>Virtual Memory<a hidden class=anchor aria-hidden=true href=#virtual-memory>#</a></h3><p>The memory layout we are talking about is the process&rsquo;s virtual memory.
+runtime.</p></li></ul><p><img src=/virtual_memory_layout.png alt="virtual memory layout"></p><h3 id=virtual-memory>Virtual Memory<a hidden class=anchor aria-hidden=true href=#virtual-memory>#</a></h3><p>The memory layout we are talking about is the process&rsquo;s virtual memory.
 A virtual memory scheme splits the memory used by each process into small units
 called pages. Correspondingly RAM is divided into a series of page frames of the
 same size.</p><p>In order to support this organization the kernel maintains a page table for each
 process. The page table describes the location of each page in the process’s virtual
 address space (the set of all virtual memory pages available to the process).
 Each entry in the page table either indicates the location of a virtual page in RAM
-or indicates that it currently resides on disk (swap).</p><p><img src=/static/page_mapping.png alt="page mapping"></p><p>At any one time, only some of the pages of a program need
+or indicates that it currently resides on disk (swap).</p><p><img src=/page_mapping.png alt="page mapping"></p><p>At any one time, only some of the pages of a program need
 to be resident in physical memory page frames; these pages form the so-called
 resident set. Copies of the unused pages of a program are maintained in the swap
 area—a reserved area of disk space used to supplement the computer’s RAM—and
