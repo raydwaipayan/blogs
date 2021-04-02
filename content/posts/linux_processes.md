@@ -30,7 +30,7 @@ a host of other information.
 
 Each process has a process ID (PID), a positive integer that uniquely identifies the
 process on the system. Process IDs are used and returned by a variety of system
-calls. For example, the kill() system call (Section 20.5) allows the caller to 
+calls. For example, the kill() system call allows the caller to 
 send a signal to a process with a specific process ID
 
 The getpid() system call returns the Process ID of the calling process:
